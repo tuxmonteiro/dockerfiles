@@ -1,0 +1,3 @@
+[submodule "docker-sonarqube"]
+	path = docker-sonarqube
+	url = git@github.com:tuxmonteiro/docker-sonarqube.git
