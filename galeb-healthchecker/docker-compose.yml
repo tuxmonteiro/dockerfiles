@@ -1,0 +1,4 @@
+healthchecker:
+  image: tuxmonteiro/galeb-healthchecker
+  volumes:
+   - ~/.m2:/home/galeb/.m2

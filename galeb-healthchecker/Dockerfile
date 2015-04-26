@@ -1,0 +1,17 @@
+FROM tuxmonteiro/ubuntu-orajdk8
+
+MAINTAINER Marcelo Teixeira Monteiro
+
+ADD start.sh /usr/bin/
+ADD log4j.xml /tmp/
+
+RUN apt-get -y install git && \
+    chmod +x /usr/bin/start.sh && \
+    useradd -m -u 1000 -d /home/galeb galeb
+
+WORKDIR /home/galeb
+
+USER galeb
+
+CMD ["/usr/bin/start.sh"]
+

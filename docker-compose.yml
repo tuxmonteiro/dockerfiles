@@ -1,0 +1,18 @@
+router:
+  image: tuxmonteiro/galeb-router
+  ports:
+   - "8080:8080"
+  volumes:
+   - ~/.m2:/home/galeb/.m2
+
+api:
+  image: tuxmonteiro/galeb-api
+  ports:
+   - "9090:9090"
+  volumes:
+   - ~/.m2:/home/galeb/.m2
+
+healthchecker:
+  image: tuxmonteiro/galeb-healthchecker
+  volumes:
+   - ~/.m2:/home/galeb/.m2
