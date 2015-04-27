@@ -6,8 +6,6 @@ router:
    - ~/.m2:/home/galeb/.m2
   environment:
    - CLUSTER_ID=dev
-  links:
-   - backend
 
 api:
   image: tuxmonteiro/galeb-api
