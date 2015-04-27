@@ -3,12 +3,6 @@
 rootdir=$PWD
 rm -rf galeb3* || true
 
-git clone --recursive https://github.com/galeb/galeb3-libraries.git
-cd galeb3-libraries
-mvn clean install
-
-cd $rootdir
-
 git clone --recursive https://github.com/galeb/galeb3-healthchecker.git
 cd galeb3-healthchecker
 mvn clean install
