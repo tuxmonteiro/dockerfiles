@@ -1,5 +1,5 @@
 router:
-  image: tuxmonteiro/galeb-router
+  image: tuxmonteiro/galeb-router:debug
   ports:
    - "8080:8080"
   volumes:

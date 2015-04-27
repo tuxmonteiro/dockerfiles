@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export LOGLEVEL=DEBUG
+export DEBUG=true
+
 rootdir=$PWD
 rm -rf galeb3* || true
 
@@ -20,6 +23,7 @@ sed -i "s/%CLUSTER_ID%/$CLUSTER_ID/" hazelcast.xml
 java -server \
      -Xms1024m \
      -Xmx1024m \
+     -Xdebug \
      -Dlog4j.configurationFile=log4j.xml \
      -Dhazelcast.config=hazelcast.xml \
      -Dio.galeb.api.port=9090 \

@@ -1,5 +1,5 @@
 router:
-  image: tuxmonteiro/galeb-router
+  image: tuxmonteiro/galeb-router:debug
   ports:
    - "8080:8080"
   volumes:
@@ -10,7 +10,7 @@ router:
    - backend
 
 api:
-  image: tuxmonteiro/galeb-api
+  image: tuxmonteiro/galeb-api:debug
   ports:
    - "9090:9090"
   volumes:
@@ -19,14 +19,14 @@ api:
    - CLUSTER_ID=dev
 
 healthchecker:
-  image: tuxmonteiro/galeb-healthchecker
+  image: tuxmonteiro/galeb-healthchecker:debug
   volumes:
    - ~/.m2:/home/galeb/.m2
   environment:
    - CLUSTER_ID=dev
 
 backend:
-  image: tuxmonteiro/backend-test
+  image: tuxmonteiro/backend-test:debug
   ports:
    - "8081:8081"
    - "8082:8082"

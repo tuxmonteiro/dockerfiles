@@ -1,5 +1,5 @@
 api:
-  image: tuxmonteiro/galeb-api
+  image: tuxmonteiro/galeb-api:debug
   ports:
    - "9090:9090"
   volumes:

@@ -1,5 +1,5 @@
 healthchecker:
-  image: tuxmonteiro/galeb-healthchecker
+  image: tuxmonteiro/galeb-healthchecker:debug
   volumes:
    - ~/.m2:/home/galeb/.m2
   environment:
