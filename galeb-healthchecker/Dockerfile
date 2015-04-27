@@ -4,6 +4,7 @@ MAINTAINER Marcelo Teixeira Monteiro
 
 ADD start.sh /usr/bin/
 ADD log4j.xml /tmp/
+ADD hazelcast.xml /tmp/
 
 RUN apt-get -y install git && \
     chmod +x /usr/bin/start.sh && \
