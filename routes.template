@@ -11,9 +11,10 @@
 #
 #curl -v -XDELETE http://@API@:9090/rule/rule1
 
-curl -v -XPOST http://@API@:9090/backendpool -d "{'id':'pool1'}"
+#curl -v -XPOST http://@API@:9090/backendpool -d "{'id':'pool1'}"
 #curl -v -XPOST http://@API@:9090/backendpool -d "{'id':'pool1', 'properties':{'loadBalancePolicy': 'RandomPolicy'}}"
 #curl -v -XPOST http://@API@:9090/backendpool -d "{'id':'pool1', 'properties':{'loadBalancePolicy': 'IPHashPolicy'}}"
+curl -v -XPOST http://@API@:9090/backendpool -d "{'id':'pool1', 'properties':{'loadBalancePolicy': 'LeastConnPolicy'}}"
 
 curl -v -XPOST http://@API@:9090/backend -d "{'id':'http://@BACKEND@:8081','parentId':'pool1'}"
 curl -v -XPOST http://@API@:9090/backend -d "{'id':'http://@BACKEND@:8082','parentId':'pool1'}"

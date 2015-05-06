@@ -1,6 +1,9 @@
 #!/bin/bash
 
-if [ "$(uname)"  == "Darwin" -a -n "$DOCKER_HOST" ]; then
+if [ "$1" == "local" ]; then
+    API="127.0.0.1"
+    BACKEND=$API
+elif [ "$(uname)"  == "Darwin" -a -n "$DOCKER_HOST" ]; then
     API="$(echo $DOCKER_HOST | awk -F'[:/]' '{ print $4 }')"
     BACKEND=$API
 else
