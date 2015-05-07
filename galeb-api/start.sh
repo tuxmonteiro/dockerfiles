@@ -3,14 +3,7 @@
 export LOGLEVEL=DEBUG
 export DEBUG=true
 
-rootdir=$PWD
 rm -rf galeb3* || true
-
-git clone --recursive https://github.com/galeb/galeb3-libraries.git
-cd galeb3-libraries
-mvn clean install
-
-cd $rootdir
 
 git clone --recursive https://github.com/galeb/galeb3-api.git
 cd galeb3-api
@@ -26,5 +19,6 @@ java -server \
      -Xdebug \
      -Dlog4j.configurationFile=log4j.xml \
      -Dhazelcast.config=hazelcast.xml \
-     -Dio.galeb.api.port=9090 \
+     -Dio.galeb.core.services.schedulerInterval=$INTERVAL \
+     -Dio.galeb.api.port=$PORT \
      -jar target/galeb-3.0.0-SNAPSHOT-uber.jar

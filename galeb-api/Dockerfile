@@ -2,6 +2,9 @@ FROM tuxmonteiro/ubuntu-orajdk8
 
 MAINTAINER Marcelo Teixeira Monteiro
 
+ENV PORT 9090
+ENV INTERVAL 1000
+
 ADD start.sh /usr/bin/
 ADD log4j.xml /tmp/
 ADD hazelcast.xml /tmp/
