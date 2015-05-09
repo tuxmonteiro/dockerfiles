@@ -3,7 +3,7 @@ router:
   ports:
    - "8080:8080"
   volumes:
-   - ~/.m2:/home/galeb/.m2
+   - ~/docker/.m2:/home/galeb/.m2
   environment:
    - CLUSTER_ID=dev
 
@@ -12,21 +12,40 @@ api:
   ports:
    - "9090:9090"
   volumes:
-   - ~/.m2:/home/galeb/.m2
+   - ~/docker/.m2:/home/galeb/.m2
   environment:
    - CLUSTER_ID=dev
 
 healthchecker:
   image: tuxmonteiro/galeb-healthchecker
   volumes:
-   - ~/.m2:/home/galeb/.m2
+   - ~/docker/.m2:/home/galeb/.m2
   environment:
    - CLUSTER_ID=dev
 
-backend:
+metrics:
+  image: tuxmonteiro/galeb-metrics
+  volumes:
+   - ~/docker/.m2:/home/galeb/.m2
+  environment:
+   - CLUSTER_ID=dev
+
+backend1:
   image: tuxmonteiro/backend-test
   ports:
    - "8081:8081"
+
+backend2:
+  image: tuxmonteiro/backend-test
+  ports:
    - "8082:8082"
+
+backend3:
+  image: tuxmonteiro/backend-test
+  ports:
    - "8083:8083"
+
+backend4:
+  image: tuxmonteiro/backend-test
+  ports:
    - "8084:8084"

@@ -1,13 +1,6 @@
 #!/bin/bash
 
-rootdir=$PWD
 rm -rf galeb3* || true
-
-git clone --recursive https://github.com/galeb/galeb3-libraries.git
-cd galeb3-libraries
-mvn clean install
-
-cd $rootdir
 
 git clone --recursive https://github.com/galeb/galeb3-router.git
 cd galeb3-router
@@ -22,7 +15,8 @@ java -server \
      -Xmx1024m \
      -Dlog4j.configurationFile=log4j.xml \
      -Dhazelcast.config=hazelcast.xml \
-     -Dio.galeb.router.port=8080 \
+     -Dio.galeb.router.port=$PORT \
      -Dio.galeb.router.enableMetrics=false \
-     -Dio.galeb.router.maxConn=300 \
+     -Dio.galeb.router.maxConn=$MAXCONN \
+     -Dio.galeb.core.services.schedulerInterval=$INTERVAL \
      -jar target/galeb-3.0.0-SNAPSHOT-uber.jar

@@ -2,6 +2,10 @@ FROM tuxmonteiro/ubuntu-orajdk8
 
 MAINTAINER Marcelo Teixeira Monteiro
 
+ENV MAXCONN 300
+ENV INTERVAL 1000
+ENV PORT 8080
+
 ADD start.sh /usr/bin/
 ADD log4j.xml /tmp/
 ADD hazelcast.xml /tmp/

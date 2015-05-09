@@ -2,8 +2,8 @@
 
 rm -rf galeb3* || true
 
-git clone --recursive https://github.com/galeb/galeb3-healthchecker.git
-cd galeb3-healthchecker
+git clone --recursive https://github.com/galeb/galeb3-metrics.git
+cd galeb3-metrics
 mvn clean install
 cp /tmp/log4j.xml .
 cp /tmp/hazelcast.xml .
