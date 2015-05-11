@@ -14,6 +14,8 @@
     </Async>
   </Appenders>
   <Loggers>
+    <Logger name="org.xnio.listener" level="OFF" additivity="false"/>
+    <Logger name="io.undertow.request" level="OFF" additivity="false"/>
     <Root level="trace">
       <AppenderRef ref="AsyncSystem" level="${env:LOGLEVEL}"/>
     </Root>
