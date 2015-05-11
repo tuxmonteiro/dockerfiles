@@ -15,5 +15,5 @@ java -server \
      -Xmx1024m \
      -Dlog4j.configurationFile=log4j.xml \
      -Dhazelcast.config=hazelcast.xml \
-     -Dio.galeb.core.services.schedulerInterval=$INTERVAL \
+     -Dio.galeb.schedulerInterval=$INTERVAL \
      -jar target/galeb-3.0.0-SNAPSHOT-uber.jar

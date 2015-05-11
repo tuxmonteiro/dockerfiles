@@ -15,8 +15,7 @@ java -server \
      -Xmx1024m \
      -Dlog4j.configurationFile=log4j.xml \
      -Dhazelcast.config=hazelcast.xml \
-     -Dio.galeb.router.port=$PORT \
-     -Dio.galeb.router.enableMetrics=false \
-     -Dio.galeb.router.maxConn=$MAXCONN \
-     -Dio.galeb.core.services.schedulerInterval=$INTERVAL \
+     -Dio.galeb.services.router.port=$PORT \
+     -Dio.galeb.maxConn=$MAXCONN \
+     -Dio.galeb.schedulerInterval=$INTERVAL \
      -jar target/galeb-3.0.0-SNAPSHOT-uber.jar
