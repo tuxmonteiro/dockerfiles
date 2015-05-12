@@ -17,4 +17,4 @@ java -server \
      -Dhazelcast.config=hazelcast.xml \
      -Dio.galeb.schedulerInterval=$INTERVAL \
      -Dio.galeb.services.api.port=$PORT \
-     -jar target/galeb-3.0.0-SNAPSHOT-uber.jar
+     -jar target/galeb-$VERSION-uber.jar
