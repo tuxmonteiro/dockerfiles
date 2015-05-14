@@ -16,4 +16,4 @@ java -server \
      -Dlog4j.configurationFile=log4j.xml \
      -Dhazelcast.config=hazelcast.xml \
      -Dio.galeb.schedulerInterval=$INTERVAL \
-     -jar target/galeb-$VERSION-uber.jar
+     -jar target/galeb-healthchecker-$VERSION-uber.jar

@@ -3,7 +3,7 @@ FROM tuxmonteiro/ubuntu-orajdk8
 MAINTAINER Marcelo Teixeira Monteiro
 
 ENV INTERVAL 1000
-ENV VERSION 3.0.0.RC1-SNAPSHOT
+ENV VERSION 3.0.0.RC2-SNAPSHOT
 
 ADD start.sh /usr/bin/
 ADD log4j.xml /tmp/

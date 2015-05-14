@@ -18,4 +18,4 @@ java -server \
      -Dio.galeb.services.router.port=$PORT \
      -Dio.galeb.maxConn=$MAXCONN \
      -Dio.galeb.schedulerInterval=$INTERVAL \
-     -jar target/galeb-$VERSION-uber.jar
+     -jar target/galeb-router-$VERSION-uber.jar
