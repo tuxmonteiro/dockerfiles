@@ -11,6 +11,7 @@ cp /tmp/hazelcast.xml .
 sed -i "s/%CLUSTER_ID%/$CLUSTER_ID/" hazelcast.xml
 
 java -server \
+     -Xbootclasspath/p:target/alpn.jar \
      -Xms1024m \
      -Xmx1024m \
      -Dlog4j.configurationFile=log4j.xml \
