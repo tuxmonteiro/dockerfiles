@@ -8,16 +8,16 @@ fi
 
 case $POLICY in
     "rr")
-        POLICY="RoundRobinPolicy"
+        POLICY="RoundRobin"
         ;;
     "rd")
-        POLICY="RandomPolicy"
+        POLICY="Random"
         ;;
     "hash")
-        POLICY="IPHashPolicy"
+        POLICY="IPHash"
         ;;
     "lc")
-        POLICY="LeastConnPolicy"
+        POLICY="LeastConn"
         ;;
 esac
 
