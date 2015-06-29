@@ -23,13 +23,6 @@ healthchecker:
   environment:
    - CLUSTER_ID=dev
 
-metrics:
-  image: tuxmonteiro/galeb-metrics
-  volumes:
-   - ~/docker/.m2:/home/galeb/.m2
-  environment:
-   - CLUSTER_ID=dev
-
 backend1:
   image: tuxmonteiro/backend-test
   ports:
