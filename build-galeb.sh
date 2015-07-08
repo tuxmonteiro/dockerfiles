@@ -2,9 +2,9 @@
 
 curdir=$PWD
 
-for i in galeb-api galeb-healthchecker galeb-router galeb-metrics
+for i in galeb-api galeb-healthchecker galeb-router
 do
     cd $i
-    docker build -t tuxmonteiro/$i .
+    docker build -t galeb/$i .
     cd $curdir
 done
